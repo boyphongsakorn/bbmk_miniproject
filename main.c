@@ -23,7 +23,8 @@ int calu(float x,int where){
 
     }else if(where==1){
 
-        price = 50+(x*(1+rand()%3));
+        int rdnb = ceil(7+((rand()%5)/1.29));
+        price = 50+(x*rdnb);
 
     }else if(where==2){
         
@@ -53,7 +54,7 @@ void main() {
     int i=0;
     while(i < 3) {
         price[i] = calu(km,i);
-        i++;
+        i++;5
     }
     printf("Taxi : %.0f\n",price[0]);
     printf("JustGrab : %.0f (%s%.0f)\n",price[1],(price[1]-price[0] > 0) ? ("+"):(""),price[1]-price[0]);

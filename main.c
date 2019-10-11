@@ -54,7 +54,7 @@ void main() {
     int i=0;
     while(i < 3) {
         price[i] = calu(km,i);
-        i++;5
+        i++;
     }
     printf("Taxi : %.0f\n",price[0]);
     printf("JustGrab : %.0f (%s%.0f)\n",price[1],(price[1]-price[0] > 0) ? ("+"):(""),price[1]-price[0]);

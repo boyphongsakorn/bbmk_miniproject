@@ -47,6 +47,19 @@ int calu(float x,int where){
     return ceil(price);
 
 }
+int thebest(float x,float y,float z){
+    if(x>y){
+        if(x>z){
+            return "GrabBike";
+        }else{
+            return "JustGrab";
+        }
+    }else if(x>z){
+        return "GrabBike";
+    }else{
+        return "Taxi";
+    }
+}
 void main() {
     float km,price[3];
     printf("Enter Kilometer from taxi : ");
@@ -59,4 +72,5 @@ void main() {
     printf("Taxi : %.0f\n",price[0]);
     printf("JustGrab : %.0f (%s%.0f)\n",price[1],(price[1]-price[0] > 0) ? ("+"):(""),price[1]-price[0]);
     printf("GrabBike : %.0f (%s%.0f)\n",price[2],(price[2]-price[0] > 0) ? ("+"):(""),price[2]-price[0]);
+    printf("Recommend : %s",thebest(price[0],price[1],price[2]));
 }

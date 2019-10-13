@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-int opline(float x){
+char * opline(float x){
     if(x>=85&&x<=100){
         return "i think you well go to Kalasin (06:00-21:00) \nyour pay only 80 bath from Bus Terminal 3";
     }else if(x>=120&&x<=153){
@@ -55,7 +55,7 @@ int calu(float x,int where){
     return ceil(price);
 
 }
-int thebest(float x,float y,float z){
+char * thebest(float x,float y,float z){
     if(x>y){
         if(x>z){
             return "GrabBike";

@@ -1,8 +1,12 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-int opline(int x){
-    
+int opline(float x){
+    if(x>=85&&x<=100){
+        return "i think you well go to Kalasin (06:00-21:00) \nyour pay only 80 bath from Bus Terminal 3";
+    }else if(x>=120&&x<=153){
+        return "i think you well go to udon (06:00-20:00) \nyour pay only 84 bath from Bus Terminal 3";
+    }
 }
 int calu(float x,int where){
 
@@ -76,6 +80,6 @@ void main() {
     printf("Taxi : %.0f\n",price[0]);
     printf("JustGrab : %.0f (%s%.0f)\n",price[1],(price[1]-price[0] > 0) ? ("+"):(""),price[1]-price[0]);
     printf("GrabBike : %.0f (%s%.0f)\n",price[2],(price[2]-price[0] > 0) ? ("+"):(""),price[2]-price[0]);
-    printf("Recommend Service : %s",thebest(price[0],price[1],price[2]));
-    opline(km);
+    printf("Recommend Service : %s\n",thebest(price[0],price[1],price[2]));
+    printf("%s",opline(km));
 }

@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
+int opline(int x){
+    
+}
 int calu(float x,int where){
 
     float price;
@@ -73,5 +76,6 @@ void main() {
     printf("Taxi : %.0f\n",price[0]);
     printf("JustGrab : %.0f (%s%.0f)\n",price[1],(price[1]-price[0] > 0) ? ("+"):(""),price[1]-price[0]);
     printf("GrabBike : %.0f (%s%.0f)\n",price[2],(price[2]-price[0] > 0) ? ("+"):(""),price[2]-price[0]);
-    printf("Recommend : %s",thebest(price[0],price[1],price[2]));
+    printf("Recommend Service : %s",thebest(price[0],price[1],price[2]));
+    opline(km);
 }

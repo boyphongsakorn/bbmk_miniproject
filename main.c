@@ -3,9 +3,9 @@
 #include<stdlib.h>
 char * opline(float x){
     if(x>=85&&x<=100){
-        return "i think you well go to Kalasin (06:00-21:00) \nyour pay only 80 bath from Bus Terminal 3";
+        return "you well go to Kalasin (06:00-21:00) \nyour pay only 80 bath from Bus Terminal 3";
     }else if(x>=120&&x<=153){
-        return "i think you well go to udon (06:00-20:00) \nyour pay only 84 bath from Bus Terminal 3";
+        return "you well go to udon (06:00-20:00) \nyour pay only 84 bath from Bus Terminal 3";
     }
 }
 int calu(float x,int where){
@@ -69,6 +69,12 @@ char * thebest(float x,float y,float z){
     }
 }
 void main() {
+    printf("Select Your Program");
+    printf("1. Calculate Kilometer to money your need to use");
+    printf("2. Convert money you pay to Kilometer");
+    switch(){
+        
+    }
     float km,price[3];
     printf("Enter Kilometer from taxi : ");
     scanf("%f",&km);
@@ -81,5 +87,5 @@ void main() {
     printf("JustGrab : %.0f (%s%.0f)\n",price[1],(price[1]-price[0] > 0) ? ("+"):(""),price[1]-price[0]);
     printf("GrabBike : %.0f (%s%.0f)\n",price[2],(price[2]-price[0] > 0) ? ("+"):(""),price[2]-price[0]);
     printf("Recommend Service : %s\n",thebest(price[0],price[1],price[2]));
-    printf("%s",opline(km));
+    printf("AI think : %s",opline(km));
 }

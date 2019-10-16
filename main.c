@@ -69,12 +69,6 @@ char * thebest(float x,float y,float z){
     }
 }
 void main() {
-    printf("Select Your Program");
-    printf("1. Calculate Kilometer to money your need to use");
-    printf("2. Convert money you pay to Kilometer");
-    switch(){
-        
-    }
     float km,price[3];
     printf("Enter Kilometer from taxi : ");
     scanf("%f",&km);

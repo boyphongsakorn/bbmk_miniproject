@@ -7,6 +7,7 @@ char * opline(float x){
     }else if(x>=120&&x<=153){
         return "you well go to udon (06:00-20:00) \nyour pay only 84 bath from Bus Terminal 3";
     }
+    return 0;
 }
 int calu(float x,int where){
 
@@ -39,7 +40,7 @@ int calu(float x,int where){
         if(x<=5){
             if(x<=2){
                 price = 25;
-            }else if(x<=5){
+            }else if(x>5){
                 price = 25+(x-2)*5;
             }
         }else if(x>5){
